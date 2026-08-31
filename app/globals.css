@@ -1,0 +1,92 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --brand: #0066CC;
+  --brand-dark: #0052A3;
+  --text: #1a1a1a;
+  --text-sub: #555;
+  --text-muted: #888;
+  --border: #e5e5e5;
+  --bg: #ffffff;
+  --bg-soft: #f7f9fb;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.site-header {
+  background: var(--brand);
+  padding: 1.75rem 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+.container { max-width: 860px; margin: 0 auto; padding: 0 1.25rem; }
+.header-top { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 0.6rem; }
+.logo-box {
+  width: 52px; height: 52px; background: #fff; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.logo-box img { width: 44px; height: 44px; object-fit: contain; }
+.site-label { font-size: 11px; color: rgba(255,255,255,0.85); letter-spacing: 1px; margin-bottom: 2px; }
+.site-title { font-size: 26px; font-weight: 600; color: #fff; }
+.site-tagline { font-size: 14px; color: rgba(255,255,255,0.9); }
+
+main { padding: 2rem 0 1rem; }
+.update-badge { font-size: 12px; color: var(--brand); margin-bottom: 1.5rem; font-weight: 500; }
+
+.post-list { display: flex; flex-direction: column; gap: 1.75rem; }
+.post-card {
+  background: var(--bg-soft); border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden; transition: border-color 0.2s, transform 0.2s;
+}
+.post-card:hover { border-color: var(--brand); transform: translateY(-2px); }
+.post-card-img { width: 100%; height: 200px; object-fit: cover; display: block; background: #dde5ec; }
+.post-card-body { padding: 1.25rem 1.4rem 1.4rem; }
+.post-meta { font-size: 12px; color: var(--text-muted); margin-bottom: 0.6rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+.post-meta .cat { color: var(--brand); font-weight: 500; }
+.post-card h2 { font-size: 19px; font-weight: 600; line-height: 1.45; margin-bottom: 0.6rem; }
+.post-card:hover h2 { color: var(--brand); }
+.post-summary { font-size: 14px; color: var(--text-sub); margin-bottom: 0.9rem; }
+.post-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.tag { font-size: 11px; padding: 0.2rem 0.6rem; background: #fff; border: 1px solid var(--border); border-radius: 4px; color: var(--text-sub); }
+
+.cta {
+  background: var(--bg-soft); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.5rem; margin: 2.5rem 0; text-align: center;
+}
+.cta p { font-size: 14px; color: var(--text-sub); margin-bottom: 0.9rem; }
+.cta-btn {
+  display: inline-block; background: var(--brand); color: #fff;
+  padding: 0.7rem 1.6rem; border-radius: 6px; font-size: 14px; font-weight: 500;
+}
+.cta-btn:hover { background: var(--brand-dark); }
+.cta-btn + .cta-btn { margin-left: 0.6rem; }
+.cta-btn.line { background: #06C755; }
+.cta-btn.mail { background: var(--brand); }
+
+.site-footer {
+  border-top: 1px solid var(--border); margin-top: 3rem;
+  padding: 2rem 1.25rem; text-align: center; font-size: 12px; color: var(--text-muted);
+}
+.site-footer a { color: var(--brand); margin: 0 0.5rem; }
+.site-footer a:hover { text-decoration: underline; }
+
+/* 記事詳細 */
+.article-hero { width: 100%; height: 320px; object-fit: cover; background: #dde5ec; border-radius: 12px; margin-bottom: 1.5rem; }
+.article-title { font-size: 28px; font-weight: 600; line-height: 1.4; margin-bottom: 0.8rem; }
+.article-body { font-size: 16px; color: var(--text); margin: 1.5rem 0; }
+.article-body p { margin-bottom: 1rem; }
+.insight-box {
+  background: rgba(0,102,204,0.07); border-left: 4px solid var(--brand);
+  border-radius: 0 8px 8px 0; padding: 1.2rem 1.4rem; margin: 1.5rem 0; font-size: 15px;
+}
+.insight-box strong { color: var(--brand); }
+.source-link { font-size: 14px; color: var(--brand); display: inline-block; margin: 1rem 0; }
+.back-link { font-size: 14px; color: var(--text-sub); display: inline-block; margin-bottom: 1.5rem; }
+.back-link:hover { color: var(--brand); }
