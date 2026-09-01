@@ -17,15 +17,11 @@ export default function RootLayout({ children }) {
         <header className="site-header">
           <div className="container">
             <div className="header-top">
-              <a href="/" className="logo-box">
-                <img src="/logo.png" alt="SKYtrans" />
+              <a href="/" className="logo-wrap">
+                <span className="logo-text"><span className="logo-air">AIR</span>MOBILITY</span>
+                <span className="logo-underline"></span>
+                <span className="logo-sub">空飛ぶ車とドローンのニュース</span>
               </a>
-              <div>
-                <div className="site-label">エアモビリティメディア</div>
-                <a href="/" className="site-title" style={{ display: 'block' }}>
-                  空飛ぶ車とドローンのニュース
-                </a>
-              </div>
             </div>
             <p className="site-tagline">
               ドローンから空飛ぶ車へ。エアモビリティの全景を、ビジネス視点で配信
