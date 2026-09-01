@@ -1,12 +1,33 @@
 import './globals.css';
 
 export const metadata = {
-  title: '空飛ぶ車とドローンのニュース',
-  description: 'ドローンから空飛ぶ車へ。エアモビリティの全景を、ビジネス視点で配信',
+  metadataBase: new URL('https://airmobility.jp'),
+  title: '空飛ぶ車とドローンのニュース | AIRMOBILITY',
+  description: 'ドローンから空飛ぶ車へ。エアモビリティの最新ニュースを、市場性・収益性・リスクといったビジネス視点で厳選してお届けします。経営者・起業家・投資家のための業界メディア。',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
+    ],
+    apple: '/apple-icon.png',
+  },
   openGraph: {
-    title: '空飛ぶ車とドローンのニュース',
+    title: '空飛ぶ車とドローンのニュース | AIRMOBILITY',
     description: 'ドローンから空飛ぶ車へ。エアモビリティの全景を、ビジネス視点で配信',
+    url: 'https://airmobility.jp',
+    siteName: 'AIRMOBILITY',
+    locale: 'ja_JP',
     type: 'website',
+    images: [
+      { url: '/ogp.png', width: 1200, height: 630, alt: 'AIRMOBILITY - 空飛ぶ車とドローンのニュース' },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '空飛ぶ車とドローンのニュース | AIRMOBILITY',
+    description: 'ドローンから空飛ぶ車へ。エアモビリティの全景を、ビジネス視点で配信',
+    images: ['/ogp.png'],
   },
 };
 
