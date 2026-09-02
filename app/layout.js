@@ -61,6 +61,18 @@ export default function RootLayout({ children }) {
               ドローンから空飛ぶ車へ。エアモビリティの全景を、ビジネス視点で配信
             </p>
           </div>
+          <nav className="site-nav">
+            <div className="container nav-inner">
+              <div className="nav-links">
+                <a href="/">ニュース</a>
+                <a href="/column">コラム</a>
+              </div>
+              <div className="nav-cta">
+                <a href="https://lin.ee/8X3vPpq" target="_blank" rel="noopener noreferrer" className="nav-btn line">LINE登録</a>
+                <a href="https://mail.os7.biz/add/1JVP" target="_blank" rel="noopener noreferrer" className="nav-btn mail">メルマガ登録</a>
+              </div>
+            </div>
+          </nav>
         </header>
         {children}
         <footer className="site-footer">
