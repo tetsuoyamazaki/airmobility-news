@@ -1,7 +1,7 @@
-import { getSortedPosts } from '../lib/posts';
+import { getPostsByType } from '../lib/posts';
 
 export default function Home() {
-  const posts = getSortedPosts();
+  const posts = getPostsByType('news');
   const featured = posts[0];
   const rest = posts.slice(1);
 
