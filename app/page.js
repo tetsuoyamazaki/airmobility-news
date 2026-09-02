@@ -26,6 +26,7 @@ export default function Home() {
               <div className="post-meta">
                 <span>{featured.date}</span>
                 {featured.category && <span className="cat">{featured.category}</span>}
+                {featured.isNew && <span className="new-badge">NEW</span>}
               </div>
               <h2 className="featured-title">{featured.title}</h2>
               {featured.summary && <p className="featured-summary">{featured.summary}</p>}
@@ -50,6 +51,7 @@ export default function Home() {
                   <div className="post-meta">
                     <span>{post.date}</span>
                     {post.category && <span className="cat">{post.category}</span>}
+                    {post.isNew && <span className="new-badge">NEW</span>}
                   </div>
                   <h3 className="grid-card-title">{post.title}</h3>
                   {post.tags && post.tags.length > 0 && (
