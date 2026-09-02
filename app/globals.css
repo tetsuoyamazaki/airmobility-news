@@ -39,23 +39,52 @@ a { color: inherit; text-decoration: none; }
 .site-tagline { font-size: 17px; font-weight: 500; color: #fff; margin-top: 0.7rem; line-height: 1.5; }
 
 main { padding: 2rem 0 1rem; }
-.update-badge { font-size: 12px; color: var(--brand); margin-bottom: 1.5rem; font-weight: 500; }
 
-.post-list { display: flex; flex-direction: column; gap: 1.75rem; }
-.post-card {
+.top-lead { margin-bottom: 1.5rem; }
+.update-badge { font-size: 12px; color: var(--brand); font-weight: 500; }
+.concept-note { display: block; font-size: 13px; color: var(--text-secondary); margin-top: 6px; line-height: 1.5; }
+
+.post-meta { font-size: 12px; color: var(--text-muted); margin-bottom: 0.6rem; display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center; }
+.post-meta .cat { color: var(--brand); font-weight: 500; }
+.post-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.tag { font-size: 11px; padding: 0.2rem 0.6rem; background: #fff; border: 1px solid var(--border); border-radius: 4px; color: var(--text-sub); }
+
+/* 繝｡繧､繝ｳ險倅ｺ具ｼ亥､ｧ縺阪￥陦ｨ遉ｺ�� */
+.featured-card {
+  display: flex; background: var(--surface, #fff); border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden; margin-bottom: 2rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.featured-card:hover { border-color: var(--brand); transform: translateY(-2px); }
+.featured-img { width: 46%; min-height: 280px; background-size: cover; background-position: center; background-color: #dde5ec; flex-shrink: 0; }
+.featured-body { flex: 1; padding: 1.5rem 1.75rem; display: flex; flex-direction: column; justify-content: center; }
+.featured-title { font-size: 22px; font-weight: 600; line-height: 1.4; margin-bottom: 0.7rem; }
+.featured-card:hover .featured-title { color: var(--brand); }
+.featured-summary { font-size: 14px; color: var(--text-sub); line-height: 1.7; margin-bottom: 1rem; }
+.featured-insight { background: rgba(0,102,204,0.06); border-left: 3px solid var(--brand); border-radius: 0 8px 8px 0; padding: 0.9rem 1.1rem; }
+.featured-insight-label { font-size: 11px; font-weight: 600; color: var(--brand); letter-spacing: 0.05em; margin-bottom: 5px; }
+.featured-insight-text { font-size: 13px; color: var(--text); line-height: 1.7; }
+
+/* 繧ｰ繝ｪ繝�ラ�域ｮ九ｊ縺ｮ險倅ｺ具ｼ� */
+.post-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.grid-card {
   background: var(--bg-soft); border: 1px solid var(--border);
   border-radius: 12px; overflow: hidden; transition: border-color 0.2s, transform 0.2s;
 }
-.post-card:hover { border-color: var(--brand); transform: translateY(-2px); }
-.post-card-img { width: 100%; height: 200px; object-fit: cover; display: block; background: #dde5ec; }
-.post-card-body { padding: 1.25rem 1.4rem 1.4rem; }
-.post-meta { font-size: 12px; color: var(--text-muted); margin-bottom: 0.6rem; display: flex; gap: 1rem; flex-wrap: wrap; }
-.post-meta .cat { color: var(--brand); font-weight: 500; }
-.post-card h2 { font-size: 19px; font-weight: 600; line-height: 1.45; margin-bottom: 0.6rem; }
-.post-card:hover h2 { color: var(--brand); }
-.post-summary { font-size: 14px; color: var(--text-sub); margin-bottom: 0.9rem; }
-.post-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
-.tag { font-size: 11px; padding: 0.2rem 0.6rem; background: #fff; border: 1px solid var(--border); border-radius: 4px; color: var(--text-sub); }
+.grid-card:hover { border-color: var(--brand); transform: translateY(-2px); }
+.grid-card-img { width: 100%; height: 180px; background-size: cover; background-position: center; background-color: #dde5ec; }
+.grid-card-body { padding: 1.1rem 1.25rem 1.25rem; }
+.grid-card-title { font-size: 17px; font-weight: 600; line-height: 1.45; margin-bottom: 0.7rem; }
+.grid-card:hover .grid-card-title { color: var(--brand); }
+
+/* 繧ｹ繝槭��夂ｸｦ1蛻励↓蛻�ｊ譖ｿ縺� */
+@media (max-width: 640px) {
+  .featured-card { flex-direction: column; }
+  .featured-img { width: 100%; min-height: 0; height: 200px; }
+  .featured-body { padding: 1.1rem 1.2rem 1.3rem; }
+  .featured-title { font-size: 19px; }
+  .post-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+}
 
 .cta {
   background: var(--bg-soft); border: 1px solid var(--border); border-radius: 12px;
