@@ -2,39 +2,68 @@ import { getSortedPosts } from '../lib/posts';
 
 export default function Home() {
   const posts = getSortedPosts();
+  const featured = posts[0];
+  const rest = posts.slice(1);
 
   return (
     <main>
       <div className="container">
-        <div className="update-badge">✦ 毎週更新</div>
-
-        <div className="post-list">
-          {posts.length === 0 && (
-            <p style={{ color: '#888' }}>記事はまだありません。</p>
-          )}
-          {posts.map((post) => (
-            <a href={`/posts/${post.slug}`} key={post.slug} className="post-card">
-              {post.image && (
-                <img src={post.image} alt={post.title} className="post-card-img" />
-              )}
-              <div className="post-card-body">
-                <div className="post-meta">
-                  <span>{post.date}</span>
-                  {post.category && <span className="cat">{post.category}</span>}
-                </div>
-                <h2>{post.title}</h2>
-                {post.summary && <p className="post-summary">{post.summary}</p>}
-                {post.tags && post.tags.length > 0 && (
-                  <div className="post-tags">
-                    {post.tags.map((t) => (
-                      <span className="tag" key={t}>{t}</span>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </a>
-          ))}
+        <div className="top-lead">
+          <span className="update-badge">✦ 毎週更新</span>
+          <span className="concept-note">単なるニュースではなく、市場性・収益性・リスクをビジネス視点で分析</span>
         </div>
+
+        {posts.length === 0 && (
+          <p style={{ color: '#888' }}>記事はまだありません。</p>
+        )}
+
+        {featured && (
+          <a href={`/posts/${featured.slug}`} className="featured-card">
+            {featured.image && (
+              <div className="featured-img" style={{ backgroundImage: `url(${featured.image})` }} />
+            )}
+            <div className="featured-body">
+              <div className="post-meta">
+                <span>{featured.date}</span>
+                {featured.category && <span className="cat">{featured.category}</span>}
+              </div>
+              <h2 className="featured-title">{featured.title}</h2>
+              {featured.summary && <p className="featured-summary">{featured.summary}</p>}
+              {featured.insight && (
+                <div className="featured-insight">
+                  <div className="featured-insight-label">ビジネスポイント</div>
+                  <div className="featured-insight-text">{featured.insight}</div>
+                </div>
+              )}
+            </div>
+          </a>
+        )}
+
+        {rest.length > 0 && (
+          <div className="post-grid">
+            {rest.map((post) => (
+              <a href={`/posts/${post.slug}`} key={post.slug} className="grid-card">
+                {post.image && (
+                  <div className="grid-card-img" style={{ backgroundImage: `url(${post.image})` }} />
+                )}
+                <div className="grid-card-body">
+                  <div className="post-meta">
+                    <span>{post.date}</span>
+                    {post.category && <span className="cat">{post.category}</span>}
+                  </div>
+                  <h3 className="grid-card-title">{post.title}</h3>
+                  {post.tags && post.tags.length > 0 && (
+                    <div className="post-tags">
+                      {post.tags.slice(0, 3).map((t) => (
+                        <span className="tag" key={t}>{t}</span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </a>
+            ))}
+          </div>
+        )}
 
         <div className="cta">
           <p>毎週のニュースを受け取る</p>
