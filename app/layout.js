@@ -34,6 +34,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ja">
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1J26SM5W6K"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-1J26SM5W6K');
+            `,
+          }}
+        />
+      </head>
       <body>
         <header className="site-header">
           <div className="container">
