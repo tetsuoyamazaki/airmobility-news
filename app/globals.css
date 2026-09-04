@@ -67,7 +67,7 @@ main { padding: 2rem 0 1rem; }
 .post-meta { font-size: 12px; color: var(--text-muted); margin-bottom: 0.6rem; display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center; }
 .post-meta .cat { color: var(--brand); font-weight: 500; }
 .read-time { color: var(--text-muted); font-size: 11px; }
-.read-time::before { content: "竢ｱ "; opacity: 0.7; }
+.read-time::before { content: "隱ｭ莠�ｼ�"; }
 .new-badge { font-size: 10px; font-weight: 700; color: #fff; background: #E8452B; padding: 2px 7px; border-radius: 4px; letter-spacing: 0.05em; }
 .post-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
 .tag { font-size: 11px; padding: 0.2rem 0.6rem; background: #fff; border: 1px solid var(--border); border-radius: 4px; color: var(--text-sub); }
@@ -79,7 +79,7 @@ main { padding: 2rem 0 1rem; }
   transition: border-color 0.2s, transform 0.2s;
 }
 .featured-card:hover { border-color: var(--brand); transform: translateY(-2px); }
-.featured-img { width: 46%; min-height: 280px; background-size: cover; background-position: center; background-color: #dde5ec; flex-shrink: 0; }
+.featured-img { width: 46%; aspect-ratio: 1200 / 630; background-size: cover; background-position: center; background-color: #dde5ec; flex-shrink: 0; }
 .featured-body { flex: 1; padding: 1.5rem 1.75rem; display: flex; flex-direction: column; justify-content: center; }
 .featured-title { font-size: 22px; font-weight: 600; line-height: 1.4; margin-bottom: 0.7rem; }
 .featured-card:hover .featured-title { color: var(--brand); }
@@ -95,7 +95,7 @@ main { padding: 2rem 0 1rem; }
   border-radius: 12px; overflow: hidden; transition: border-color 0.2s, transform 0.2s;
 }
 .grid-card:hover { border-color: var(--brand); transform: translateY(-2px); }
-.grid-card-img { width: 100%; height: 180px; background-size: cover; background-position: center; background-color: #dde5ec; }
+.grid-card-img { width: 100%; aspect-ratio: 1200 / 630; background-size: cover; background-position: center; background-color: #dde5ec; }
 .grid-card-body { padding: 1.1rem 1.25rem 1.25rem; }
 .grid-card-title { font-size: 17px; font-weight: 600; line-height: 1.45; margin-bottom: 0.7rem; }
 .grid-card:hover .grid-card-title { color: var(--brand); }
@@ -104,7 +104,7 @@ main { padding: 2rem 0 1rem; }
 /* 繧ｹ繝槭��夂ｸｦ1蛻励↓蛻�ｊ譖ｿ縺� */
 @media (max-width: 640px) {
   .featured-card { flex-direction: column; }
-  .featured-img { width: 100%; min-height: 0; height: 200px; }
+  .featured-img { width: 100%; aspect-ratio: 1200 / 630; }
   .featured-body { padding: 1.1rem 1.2rem 1.3rem; }
   .featured-title { font-size: 19px; }
   .post-grid { grid-template-columns: 1fr; gap: 1.25rem; }
