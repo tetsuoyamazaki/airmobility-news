@@ -1,4 +1,4 @@
-import { getAllSlugs, getPostBySlug } from '../../../lib/posts';
+import { getAllSlugs, getPostBySlug, getColumnNav } from '../../../lib/posts';
 
 export async function generateStaticParams() {
   return getAllSlugs();
@@ -11,11 +11,13 @@ export async function generateMetadata({ params }) {
 
 export default async function Post({ params }) {
   const post = await getPostBySlug(params.slug);
+  const isColumn = post.type === 'column';
+  const columnNav = isColumn ? getColumnNav(params.slug) : { prev: null, next: null };
 
   return (
     <main>
       <div className="container">
-        <a href="/" className="back-link">← 一覧に戻る</a>
+        <a href={isColumn ? '/column' : '/'} className="back-link">← {isColumn ? 'コラム一覧に戻る' : '一覧に戻る'}</a>
 
         {post.image && <img src={post.image} alt={post.title} className="article-hero" />}
 
@@ -46,6 +48,23 @@ export default async function Post({ params }) {
             {post.tags.map((t) => (
               <span className="tag" key={t}>{t}</span>
             ))}
+          </div>
+        )}
+
+        {isColumn && (columnNav.prev || columnNav.next) && (
+          <div className="column-nav">
+            {columnNav.prev ? (
+              <a href={`/posts/${columnNav.prev.slug}`} className="column-nav-item prev">
+                <span className="column-nav-label">← 前のコラム</span>
+                <span className="column-nav-title">{columnNav.prev.title}</span>
+              </a>
+            ) : <span />}
+            {columnNav.next ? (
+              <a href={`/posts/${columnNav.next.slug}`} className="column-nav-item next">
+                <span className="column-nav-label">次のコラム →</span>
+                <span className="column-nav-title">{columnNav.next.title}</span>
+              </a>
+            ) : <span />}
           </div>
         )}
 
