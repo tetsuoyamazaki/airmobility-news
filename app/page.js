@@ -26,6 +26,7 @@ export default function Home() {
               <div className="post-meta">
                 <span>{featured.date}</span>
                 {featured.category && <span className="cat">{featured.category}</span>}
+                <span className="read-time">{featured.readingTime}分で読めます</span>
                 {featured.isNew && <span className="new-badge">NEW</span>}
               </div>
               <h2 className="featured-title">{featured.title}</h2>
@@ -51,6 +52,7 @@ export default function Home() {
                   <div className="post-meta">
                     <span>{post.date}</span>
                     {post.category && <span className="cat">{post.category}</span>}
+                    <span className="read-time">{post.readingTime}分</span>
                     {post.isNew && <span className="new-badge">NEW</span>}
                   </div>
                   <h3 className="grid-card-title">{post.title}</h3>
