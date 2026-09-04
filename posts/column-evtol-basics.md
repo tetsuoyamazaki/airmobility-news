@@ -5,7 +5,7 @@ type: "column"
 category: "入門コラム"
 source: ""
 sourceUrl: ""
-image: "https://images.unsplash.com/photo-1610642372651-fe6e7bc60ba0?w=1200&q=80"
+image: "/2026-09-02-column-evtol-basics.jpg"
 summary: "「空飛ぶ車」とよく聞くけれど、実際のところ何なのか。eVTOLの基本、ドローンとの違い、2030年に向けた実用化の流れを、これから業界を追う人向けに整理します。"
 insight: ""
 tags: ["入門", "eVTOL", "基礎知識"]
