@@ -31,6 +31,7 @@ export default function Column() {
                   <div className="post-meta">
                     <span>{post.date}</span>
                     {post.category && <span className="cat">{post.category}</span>}
+                    <span className="read-time">{post.readingTime}分</span>
                     {post.isNew && <span className="new-badge">NEW</span>}
                   </div>
                   <h3 className="grid-card-title">{post.title}</h3>
