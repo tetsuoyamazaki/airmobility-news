@@ -26,7 +26,7 @@ export default function Home() {
               <div className="post-meta">
                 <span>{featured.date}</span>
                 {featured.category && <span className="cat">{featured.category}</span>}
-                <span className="read-time">{featured.readingTime}分で読めます</span>
+                <span className="read-time">{featured.readingTime}分</span>
                 {featured.isNew && <span className="new-badge">NEW</span>}
               </div>
               <h2 className="featured-title">{featured.title}</h2>
