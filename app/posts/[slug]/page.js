@@ -22,7 +22,7 @@ export default async function Post({ params }) {
         <div className="post-meta" style={{ marginBottom: '0.8rem' }}>
           <span>{post.date}</span>
           {post.category && <span className="cat">{post.category}</span>}
-          <span className="read-time">{post.readingTime}分</span>
+          <span className="read-time">読了：{post.readingTime}分</span>
         </div>
 
         <h1 className="article-title">{post.title}</h1>
