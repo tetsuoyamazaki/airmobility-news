@@ -80,7 +80,7 @@ export default function RootLayout({ children }) {
             <a href="https://www.skytrans.jp/" target="_blank" rel="noopener noreferrer">運営会社</a>
             <a href="https://www.skytrans.jp/privacy" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>
           </div>
-          <div style={{ marginTop: '0.6rem' }}>© 2025 SKYtrans.LLC</div>
+          <div style={{ marginTop: '0.6rem' }}>© 2026 SKYtrans.LLC</div>
         </footer>
       </body>
     </html>
