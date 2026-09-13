@@ -43,7 +43,7 @@ export default function Column() {
         )}
 
         <div className="cta">
-          <p>毎週のニュースを受け取る</p>
+          <p>毎週のニュースを無料で受け取る</p>
           <a href="https://lin.ee/8X3vPpq" target="_blank" rel="noopener noreferrer" className="cta-btn line">LINE公式に登録</a>
           <a href="https://mail.os7.biz/add/1JVP" target="_blank" rel="noopener noreferrer" className="cta-btn mail">メルマガ登録</a>
         </div>
