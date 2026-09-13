@@ -68,8 +68,8 @@ export default function RootLayout({ children }) {
                 <a href="/column">コラム</a>
               </div>
               <div className="nav-cta">
-                <a href="https://lin.ee/8X3vPpq" target="_blank" rel="noopener noreferrer" className="nav-btn line">LINE登録</a>
-                <a href="https://mail.os7.biz/add/1JVP" target="_blank" rel="noopener noreferrer" className="nav-btn mail">メルマガ登録</a>
+                <a href="https://lin.ee/8X3vPpq" target="_blank" rel="noopener noreferrer" className="nav-btn line">LINE無料登録</a>
+                <a href="https://mail.os7.biz/add/1JVP" target="_blank" rel="noopener noreferrer" className="nav-btn mail">メルマガ無料登録</a>
               </div>
             </div>
           </nav>
