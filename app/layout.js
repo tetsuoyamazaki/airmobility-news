@@ -67,6 +67,20 @@ export default function RootLayout({ children }) {
               空飛ぶ車の最前線を、ビジネス視点で毎週配信
             </p>
           </div>
+          <nav className="site-nav">
+            <div className="container">
+              <div className="nav-inner">
+                <div className="nav-links">
+                  <a href="/">ホーム</a>
+                  <a href="/column">コラム</a>
+                </div>
+                <div className="nav-cta">
+                  <a href="https://lin.ee/8X3vPpq" target="_blank" rel="noopener noreferrer" className="nav-btn line">LINE無料登録</a>
+                  <a href="https://mail.os7.biz/add/1JVP" target="_blank" rel="noopener noreferrer" className="nav-btn mail">メルマガ無料登録</a>
+                </div>
+              </div>
+            </div>
+          </nav>
         </header>
         {children}
         <footer className="site-footer">
@@ -74,7 +88,7 @@ export default function RootLayout({ children }) {
             <a href="https://www.skytrans.jp/" target="_blank" rel="noopener noreferrer">運営会社</a>
             <a href="https://www.skytrans.jp/privacy" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>
           </div>
-          <div style={{ marginTop: '0.6rem' }}>© 2025 SKYtrans.LLC</div>
+          <div style={{ marginTop: '0.6rem' }}>© 2026 SKYtrans.LLC</div>
         </footer>
       </body>
     </html>
