@@ -2,8 +2,8 @@ import './globals.css';
 
 export const metadata = {
   metadataBase: new URL('https://airmobility.jp'),
-  title: '空飛ぶ車とドローンのニュース | AIRMOBILITY',
-  description: 'ドローンから空飛ぶ車へ。エアモビリティの最新ニュースを、市場性・収益性・リスクといったビジネス視点で厳選してお届けします。経営者・起業家・投資家のための業界メディア。',
+  title: '空飛ぶ車のニュースメディア | AIRMOBILITY',
+  description: '空飛ぶ車（eVTOL）の最新ニュースを、市場性・収益性・リスクといったビジネス視点で厳選してお届けします。経営者・起業家・投資家のための業界メディア。',
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
@@ -13,20 +13,20 @@ export const metadata = {
     apple: '/apple-icon.png',
   },
   openGraph: {
-    title: '空飛ぶ車とドローンのニュース | AIRMOBILITY',
-    description: 'ドローンから空飛ぶ車へ。エアモビリティの全景を、ビジネス視点で配信',
+    title: '空飛ぶ車のニュースメディア | AIRMOBILITY',
+    description: '空飛ぶ車の最前線を、ビジネス視点で毎週配信',
     url: 'https://airmobility.jp',
     siteName: 'AIRMOBILITY',
     locale: 'ja_JP',
     type: 'website',
     images: [
-      { url: '/ogp.png', width: 1200, height: 630, alt: 'AIRMOBILITY - 空飛ぶ車とドローンのニュース' },
+      { url: '/ogp.png', width: 1200, height: 630, alt: 'AIRMOBILITY - 空飛ぶ車のニュースメディア' },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: '空飛ぶ車とドローンのニュース | AIRMOBILITY',
-    description: 'ドローンから空飛ぶ車へ。エアモビリティの全景を、ビジネス視点で配信',
+    title: '空飛ぶ車のニュースメディア | AIRMOBILITY',
+    description: '空飛ぶ車の最前線を、ビジネス視点で毎週配信',
     images: ['/ogp.png'],
   },
 };
@@ -54,25 +54,13 @@ export default function RootLayout({ children }) {
               <a href="/" className="logo-wrap">
                 <span className="logo-text"><span className="logo-air">AIR</span>MOBILITY</span>
                 <span className="logo-underline"></span>
-                <span className="logo-sub">空飛ぶ車とドローンのニュース</span>
+                <span className="logo-sub">空飛ぶ車のニュースメディア</span>
               </a>
             </div>
             <p className="site-tagline">
-              ドローンから空飛ぶ車へ。エアモビリティの全景を、ビジネス視点で配信
+              空飛ぶ車の最前線を、ビジネス視点で毎週配信
             </p>
           </div>
-          <nav className="site-nav">
-            <div className="container nav-inner">
-              <div className="nav-links">
-                <a href="/">ニュース</a>
-                <a href="/column">コラム</a>
-              </div>
-              <div className="nav-cta">
-                <a href="https://lin.ee/8X3vPpq" target="_blank" rel="noopener noreferrer" className="nav-btn line">LINE無料登録</a>
-                <a href="https://mail.os7.biz/add/1JVP" target="_blank" rel="noopener noreferrer" className="nav-btn mail">メルマガ無料登録</a>
-              </div>
-            </div>
-          </nav>
         </header>
         {children}
         <footer className="site-footer">
@@ -80,7 +68,7 @@ export default function RootLayout({ children }) {
             <a href="https://www.skytrans.jp/" target="_blank" rel="noopener noreferrer">運営会社</a>
             <a href="https://www.skytrans.jp/privacy" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>
           </div>
-          <div style={{ marginTop: '0.6rem' }}>© 2026 SKYtrans.LLC</div>
+          <div style={{ marginTop: '0.6rem' }}>© 2025 SKYtrans.LLC</div>
         </footer>
       </body>
     </html>
