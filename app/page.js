@@ -31,10 +31,10 @@ export default function Home() {
               </div>
               <h2 className="featured-title">{featured.title}</h2>
               {featured.summary && <p className="featured-summary">{featured.summary}</p>}
-              {featured.insight && (
+              {(featured.insightShort || featured.insight) && (
                 <div className="featured-insight">
                   <div className="featured-insight-label">ビジネスポイント</div>
-                  <div className="featured-insight-text">{featured.insight}</div>
+                  <div className="featured-insight-text">{featured.insightShort || featured.insight}</div>
                 </div>
               )}
             </div>
