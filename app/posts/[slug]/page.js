@@ -1,4 +1,4 @@
-import { getAllSlugs, getPostBySlug, getColumnNav } from '../../../lib/posts';
+import { getAllSlugs, getPostBySlug } from '../../../lib/posts';
 
 export async function generateStaticParams() {
   return getAllSlugs();
@@ -6,25 +6,22 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const post = await getPostBySlug(params.slug);
-  return { title: `${post.title} | 空飛ぶ車とドローンのニュース` };
+  return { title: `${post.title} | 空飛ぶ車のニュースメディア` };
 }
 
 export default async function Post({ params }) {
   const post = await getPostBySlug(params.slug);
-  const isColumn = post.type === 'column';
-  const columnNav = isColumn ? getColumnNav(params.slug) : { prev: null, next: null };
 
   return (
     <main>
       <div className="container">
-        <a href={isColumn ? '/column' : '/'} className="back-link">← {isColumn ? 'コラム一覧に戻る' : '一覧に戻る'}</a>
+        <a href="/" className="back-link">← 一覧に戻る</a>
 
         {post.image && <img src={post.image} alt={post.title} className="article-hero" />}
 
         <div className="post-meta" style={{ marginBottom: '0.8rem' }}>
           <span>{post.date}</span>
           {post.category && <span className="cat">{post.category}</span>}
-          <span className="read-time">読了：{post.readingTime}分</span>
         </div>
 
         <h1 className="article-title">{post.title}</h1>
@@ -51,25 +48,8 @@ export default async function Post({ params }) {
           </div>
         )}
 
-        {isColumn && (columnNav.prev || columnNav.next) && (
-          <div className="column-nav">
-            {columnNav.prev ? (
-              <a href={`/posts/${columnNav.prev.slug}`} className="column-nav-item prev">
-                <span className="column-nav-label">← 前のコラム</span>
-                <span className="column-nav-title">{columnNav.prev.title}</span>
-              </a>
-            ) : <span />}
-            {columnNav.next ? (
-              <a href={`/posts/${columnNav.next.slug}`} className="column-nav-item next">
-                <span className="column-nav-label">次のコラム →</span>
-                <span className="column-nav-title">{columnNav.next.title}</span>
-              </a>
-            ) : <span />}
-          </div>
-        )}
-
         <div className="cta">
-          <p>毎週のニュースを無料で受け取る</p>
+          <p>毎週のニュースを受け取る</p>
           <a href="https://lin.ee/8X3vPpq" target="_blank" rel="noopener noreferrer" className="cta-btn line">LINE公式に登録</a>
           <a href="https://mail.os7.biz/add/1JVP" target="_blank" rel="noopener noreferrer" className="cta-btn mail">メルマガ登録</a>
         </div>
