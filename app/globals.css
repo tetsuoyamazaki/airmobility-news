@@ -22,6 +22,20 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* 譌･譛ｬ隱槭�謾ｹ陦後ｒ閾ｪ辟ｶ縺ｪ譁�ｯ菴咲ｽｮ縺ｫ縺吶ｋ */
+.featured-insight-text,
+.featured-summary,
+.post-summary,
+.grid-card-summary,
+.insight-box,
+.article-body,
+.site-tagline {
+  word-break: normal;
+  overflow-wrap: break-word;
+  line-break: strict;
+  word-break: auto-phrase;
+}
+
 a { color: inherit; text-decoration: none; }
 
 .site-header {
