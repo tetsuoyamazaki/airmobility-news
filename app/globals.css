@@ -12,12 +12,14 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", "Segoe UI", sans-serif;
+  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Segoe UI", sans-serif;
   background: var(--bg);
   color: var(--text);
   font-size: 17px;
-  line-height: 1.8;
+  line-height: 1.85;
+  letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -85,8 +87,8 @@ main { padding: 2rem 0 1rem; }
 .featured-card:hover .featured-title { color: var(--brand); }
 .featured-summary { font-size: 16px; color: var(--text-sub); line-height: 1.75; margin-bottom: 1rem; }
 .featured-insight { background: rgba(0,102,204,0.06); border-left: 3px solid var(--brand); border-radius: 0 8px 8px 0; padding: 0.9rem 1.1rem; }
-.featured-insight-label { font-size: 13px; font-weight: 600; color: var(--brand); letter-spacing: 0.05em; margin-bottom: 5px; }
-.featured-insight-text { font-size: 15px; color: var(--text); line-height: 1.75; }
+.featured-insight-label { font-size: 13px; font-weight: 700; color: var(--brand); letter-spacing: 0.05em; margin-bottom: 5px; }
+.featured-insight-text { font-size: 15px; font-weight: 500; color: var(--text); line-height: 1.75; }
 
 /* 繧ｰ繝ｪ繝�ラ�域ｮ九ｊ縺ｮ險倅ｺ具ｼ� */
 .post-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
@@ -139,8 +141,9 @@ main { padding: 2rem 0 1rem; }
 .insight-box {
   background: rgba(0,102,204,0.07); border-left: 4px solid var(--brand);
   border-radius: 0 8px 8px 0; padding: 1.2rem 1.4rem; margin: 1.5rem 0; font-size: 17px;
+  font-weight: 500;
 }
-.insight-box strong { color: var(--brand); }
+.insight-box strong { color: var(--brand); font-weight: 700; }
 .source-link { font-size: 15px; color: var(--brand); display: inline-block; margin: 1rem 0; }
 .back-link { font-size: 15px; color: var(--text-sub); display: inline-block; margin-bottom: 1.5rem; }
 .column-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2.5rem 0 1rem; }
